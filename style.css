@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Licorice&family=Poppins:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+  font-family: Poppins, sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+
+.hero h1,.hero p{
+  color:#fff;
+}
+
+h1{
+    font-size: 4rem;
+}
+p{
+  font-size: 20px;
+  padding-left:10px;
+}
+span{
+  font-size: 20px;
+  font-style: italic;
+  padding-left:10px;
+}
+
+section{
+    height: 100vh;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.contact{
+  height: 100%;
+}
+.hero{
+  background-image: url("images2/spacejoy-RqO6kwm4tZY-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-content,.bedroom-content,.livingroom-content,.kitchen-content,.balcony-content{
+    height: 100%;
+    display: flex;
+}
+
+.contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    width: 750px;
+    margin: 0 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+.livingroom .card:hover,.balcony .card:hover{
+  box-shadow: 0px 1px 3px 2px white;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+img{
+  height: 500px;
+}
+/*.navbar-collapse {
+    /*flex-basis: 100%;*//*
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 0;
+    /* align-items: center; */
+/*}/*
+.navbar-nav{
+    margin-top: 10px;
+}
+.nav-item{
+    padding: 0 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 20px;
+}
+.nav-item:hover{
+  background-color: #e3e3e3;
+}
+.nav-link{
+  transition: 0.3s ease;
+}*/
+
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar-nav {
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.nav-item{
+  width: 120px;
+  padding-left: 20px;
+  font-weight: bold;
+  display: flex;
+  border-radius: 20px
+}
+
+.nav-item:hover{
+  background-color: #e3e3e3;
+}
+.nav-link{
+  transition: 0.3s ease;
+}
+
+.btn{
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+.btn:hover{
+  transform:scale(1.1);
+  
+}
+.navbar-brand{
+  font-weight: bold;
+}
+
+.livingroom,.balcony{
+  background-color:#28282B;
+  color:#fff;
+}
+
+.carousel-item img{
+  height: 90vh;
+  width: 100%;
+}
+
+.carousel h1{
+  text-align: center;
+}
+
+@media screen and (max-width:768px ){
+  .bedroom-content,.kitchen-content{
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+}
+.contents{
+  justify-content: flex-end;
+}
+.hero .contents{
+  justify-content: center;
+}
+}
+
+/*.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 0;
+    align-items: center;
+    display: flex !important;
+    justify-content: flex-end;
+}
+div#navbarSupportedContent{
+    width: 200px;
+}*/
+
+.contact-content {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  @media screen and (max-width:512px){
+    .bedroom,.livingroom,.kitchen,.balcony{
+      height: 200vh;
+    }
+  }
+  @media screen and (max-height:450px){
+    .bedroom,.livingroom,.kitchen,.balcony{
+      height: 250vh;
+    }
+  }
