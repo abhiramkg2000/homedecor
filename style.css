@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Licorice&family=Poppins:wght@500&display=swap");
 
+/*********************************Common CSS starts************************************/
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 html {
@@ -11,13 +15,8 @@ html {
   scroll-padding-top: 35px;
 }
 
-body{
+body {
   font-family: Poppins, sans-serif;
-}
-
-.hero h1,
-.hero p {
-  color: #fff;
 }
 
 h1 {
@@ -26,98 +25,25 @@ h1 {
 
 p {
   font-size: 20px;
-  padding-left: 10px;
 }
 
 span {
   font-size: 20px;
   font-style: italic;
-  padding-left: 10px;
 }
 
 section {
-  height: 100vh;
-  overflow: hidden;
-  /* border: 2px solid black; */
-}
-
-.contact {
-  height: 100%;
-}
-
-.hero {
-  background-image: url("images/spacejoy-RqO6kwm4tZY-unsplash.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.hero-content,
-.bedroom-content,
-.livingroom-content,
-.kitchen-content,
-.balcony-content {
-  height: 100%;
-  display: flex;
-}
-
-.contents {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.card {
-  width: 750px;
-  margin: 0 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.card:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-.livingroom .card:hover,
-.balcony .card:hover {
-  box-shadow: 0px 1px 3px 2px white;
-}
-
-.image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow-x: hidden;
 }
 
 img {
   height: 500px;
+  width: 500px;
 }
 
-/*.navbar-collapse {
-    /*flex-basis: 100%;*/ /*
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 0;
-    /* align-items: center; */
-/*}/*
-.navbar-nav{
-    margin-top: 10px;
-}
-.nav-item{
-    padding: 0 20px;
-    font-weight: bold;
-    display: flex;
-    justify-content: flex-start;
-    border-radius: 20px;
-}
-.nav-item:hover{
-  background-color: #e3e3e3;
-}
-.nav-link{
-  transition: 0.3s ease;
-}*/
+/*********************************Common CSS ends**************************************/
 
+/*********************************Navbar Customization starts**************************/
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
@@ -132,38 +58,94 @@ img {
 
 .nav-item {
   width: 130px;
-  /* padding-left: 20px; */
   font-weight: bold;
   display: flex;
   justify-content: center;
   border-radius: 20px;
+  transition: 0.3s ease;
 }
 
 .nav-item:hover {
   background-color: #e3e3e3;
 }
 
-.nav-link {
-  transition: 0.3s ease;
-}
-
-.btn {
-  border-radius: 20px;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  transform: scale(1.1);
-}
-
 .navbar-brand {
   font-weight: bold;
+  color: rgba(0, 0, 0, 0.55) !important;
+  font-size: 1.8rem;
 }
 
-.livingroom,
-.balcony {
+/*********************************Navbar Customization ends****************************/
+
+.hero_section {
+  background-image: url("images/hero_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero_section h1,
+.hero_section p {
+  color: #fff;
+}
+
+.hero_section p {
+  font-size: 24px;
+}
+
+.contact_me_button {
+  font-size: 20px;
+  border-radius: 25px;
+  transition: 0.3s ease;
   background-color: #28282b;
   color: #fff;
+}
+
+.contact_me_button:hover {
+  transform: scale(1.1);
+  color: #fff;
+  box-shadow: none;
+}
+
+.hero-content,
+.bedroom-content,
+.livingroom-content,
+.kitchen-content,
+.balcony-content {
+  min-height: 100vh;
+}
+
+.contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.livingroom_section,
+.balcony_section,
+.contact_section {
+  background-color: #28282b;
+  color: #fff;
+}
+
+.bedroom_section,
+.kitchen_section,
+.carousel_section {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.carousel_section h1 {
+  text-align: center;
+  margin: 20px 0;
 }
 
 .carousel-item img {
@@ -171,14 +153,35 @@ img {
   width: 100%;
 }
 
-.carousel h1 {
-  text-align: center;
-  margin: 20px 0;
+.contact_section {
+  overflow: hidden;
 }
-@media screen and (max-width: 991px){
+
+.contact-content {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact_email .fa-envelope {
+  font-size: 50px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/*********************************Media Query starts***********************************/
+
+@media screen and (max-width: 991px) {
   .nav-item {
     justify-content: flex-start;
     padding-left: 25px;
+  }
+  .bedroom-content,
+  .kitchen-content {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
   }
 }
 
@@ -189,107 +192,37 @@ img {
     justify-content: space-evenly;
   }
 
-  .contents {
-    justify-content: flex-end;
-  }
-
-  .hero .contents {
+  .hero_section .contents {
     justify-content: center;
   }
-}
 
-/*.navbar-collapse {
-    flex-basis: 100%;
-    flex-grow: 0;
-    align-items: center;
-    display: flex !important;
-    justify-content: flex-end;
-}
-div#navbarSupportedContent{
-    width: 200px;
-}*/
-
-.contact-content {
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Style inputs */
-input[type="text"],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type="submit"] {
-  background-color: #04aa6d;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-/* Style the container/contact section */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10px;
-}
-
-/* Create two columns that float next to eachother */
-.column {
-  float: left;
-  width: 50%;
-  margin-top: 6px;
-  padding: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column,
-  input[type="submit"] {
-    width: 100%;
-    margin-top: 0;
+  h1 {
+    font-size: 3.5rem;
+  }
+  p {
+    font-size: 18px;
+  }
+  span {
+    font-size: 18px;
+  }
+  .contact_me_button{
+    font-size: 18px;
   }
 }
 
-@media screen and (max-width: 512px) {
-  .bedroom,
-  .livingroom,
-  .kitchen,
-  .balcony {
-    height: 200vh;
-  }
-  .hero h1{
+@media screen and (max-width: 576px) {
+  h1 {
     font-size: 3rem;
   }
-}
-
-@media screen and (max-height: 450px) {
-  .bedroom,
-  .livingroom,
-  .kitchen,
-  .balcony {
-    height: 250vh;
+  p {
+    font-size: 16px;
+  }
+  span {
+    font-size: 16px;
+  }
+  .contact_me_button{
+    font-size: 16px;
   }
 }
+
+/*********************************Media Query Ends*************************************/
