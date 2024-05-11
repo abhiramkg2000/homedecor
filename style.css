@@ -36,11 +36,6 @@ section {
   overflow-x: hidden;
 }
 
-img {
-  height: 500px;
-  width: 500px;
-}
-
 /*********************************Common CSS ends**************************************/
 
 /*********************************Navbar Customization starts**************************/
@@ -129,6 +124,14 @@ img {
   align-items: center;
 }
 
+.bedroom_section img,
+.livingroom_section img,
+.kitchen_section img,
+.balcony_section img {
+  height: 500px;
+  width: 500px;
+}
+
 .livingroom_section,
 .balcony_section,
 .contact_section {
@@ -149,7 +152,7 @@ img {
 }
 
 .carousel-item img {
-  height: 90vh;
+  height: 80vh;
   width: 100%;
 }
 
@@ -166,9 +169,14 @@ img {
 }
 
 .contact_email .fa-envelope {
-  font-size: 50px;
+  font-size: 45px;
   cursor: pointer;
   color: #fff;
+  transition: 0.3s ease-in;
+}
+
+.contact_email .fa-envelope:hover {
+  transform: scale(1.1);
 }
 
 /*********************************Media Query starts***********************************/
@@ -182,6 +190,9 @@ img {
   .kitchen-content {
     flex-direction: column-reverse;
     justify-content: space-evenly;
+  }
+  .carousel-item img {
+    height: 70vh;
   }
 }
 
@@ -205,8 +216,14 @@ img {
   span {
     font-size: 18px;
   }
+  .carousel-item img {
+    height: 60vh;
+  }
   .contact_me_button {
     font-size: 18px;
+  }
+  .contact_email .fa-envelope {
+    font-size: 40px;
   }
 }
 
@@ -214,14 +231,18 @@ img {
   h1 {
     font-size: 3rem;
   }
-  p {
-    font-size: 16px;
+  .bedroom_section img,
+  .livingroom_section img,
+  .kitchen_section img,
+  .balcony_section img {
+    height: 400px;
+    width: 400px;
   }
-  span {
-    font-size: 16px;
+  .carousel-item img {
+    height: 50vh;
   }
-  .contact_me_button {
-    font-size: 16px;
+  .contact_email .fa-envelope {
+    font-size: 35px;
   }
 }
 
