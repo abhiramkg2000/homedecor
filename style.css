@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 p {
@@ -33,7 +33,7 @@ span {
 }
 
 section {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /*********************************Common CSS ends**************************************/
@@ -56,18 +56,21 @@ section {
   font-weight: bold;
   display: flex;
   justify-content: center;
+}
+
+.nav-item .nav-link {
+  padding: 5px 20px !important;
   border-radius: 20px;
   transition: 0.3s ease;
 }
-
-.nav-item:hover {
+.nav-item .nav-link:hover {
   background-color: #e3e3e3;
 }
 
 .navbar-brand {
   font-weight: bold;
   color: rgba(0, 0, 0, 0.55) !important;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 /*********************************Navbar Customization ends****************************/
@@ -89,7 +92,7 @@ section {
 }
 
 .contact_me_button {
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 25px;
   transition: 0.3s ease;
   background-color: #28282b;
@@ -184,7 +187,6 @@ section {
 @media screen and (max-width: 991px) {
   .nav-item {
     justify-content: flex-start;
-    padding-left: 25px;
   }
   .bedroom-content,
   .kitchen-content {
@@ -207,21 +209,10 @@ section {
     justify-content: center;
   }
 
-  h1 {
-    font-size: 3.5rem;
-  }
-  p {
-    font-size: 18px;
-  }
-  span {
-    font-size: 18px;
-  }
   .carousel-item img {
     height: 60vh;
   }
-  .contact_me_button {
-    font-size: 18px;
-  }
+
   .contact_email .fa-envelope {
     font-size: 40px;
   }
@@ -229,7 +220,13 @@ section {
 
 @media screen and (max-width: 576px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 18px;
+  }
+  span {
+    font-size: 18px;
   }
   .bedroom_section img,
   .livingroom_section img,
